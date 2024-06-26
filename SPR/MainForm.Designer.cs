@@ -76,21 +76,23 @@
             // 
             // buttonFifth
             // 
-            buttonFifth.Location = new Point(126, 87);
+            buttonFifth.Location = new Point(26, 87);
             buttonFifth.Name = "buttonFifth";
             buttonFifth.Size = new Size(94, 29);
             buttonFifth.TabIndex = 5;
-            buttonFifth.Text = "button5";
+            buttonFifth.Text = "пятое";
             buttonFifth.UseVisualStyleBackColor = true;
+            buttonFifth.Click += buttonFifth_Click;
             // 
             // buttonSix
             // 
-            buttonSix.Location = new Point(26, 87);
+            buttonSix.Location = new Point(126, 87);
             buttonSix.Name = "buttonSix";
             buttonSix.Size = new Size(94, 29);
             buttonSix.TabIndex = 4;
-            buttonSix.Text = "button6";
+            buttonSix.Text = "шестое";
             buttonSix.UseVisualStyleBackColor = true;
+            buttonSix.Click += buttonSix_Click;
             // 
             // buttonFour
             // 
@@ -98,8 +100,9 @@
             buttonFour.Name = "buttonFour";
             buttonFour.Size = new Size(94, 29);
             buttonFour.TabIndex = 3;
-            buttonFour.Text = "button4";
+            buttonFour.Text = "четвертое";
             buttonFour.UseVisualStyleBackColor = true;
+            buttonFour.Click += buttonFour_Click;
             // 
             // buttonThird
             // 
@@ -107,7 +110,7 @@
             buttonThird.Name = "buttonThird";
             buttonThird.Size = new Size(94, 29);
             buttonThird.TabIndex = 2;
-            buttonThird.Text = "button3";
+            buttonThird.Text = "третье";
             buttonThird.UseVisualStyleBackColor = true;
             buttonThird.Click += buttonThird_Click;
             // 
@@ -117,7 +120,7 @@
             buttonSecond.Name = "buttonSecond";
             buttonSecond.Size = new Size(94, 29);
             buttonSecond.TabIndex = 1;
-            buttonSecond.Text = "button2";
+            buttonSecond.Text = "второе";
             buttonSecond.UseVisualStyleBackColor = true;
             buttonSecond.Click += buttonSecond_Click;
             // 
@@ -127,7 +130,7 @@
             buttonFirst.Name = "buttonFirst";
             buttonFirst.Size = new Size(94, 29);
             buttonFirst.TabIndex = 0;
-            buttonFirst.Text = "button1";
+            buttonFirst.Text = "первое";
             buttonFirst.UseVisualStyleBackColor = true;
             buttonFirst.Click += buttonFirst_Click;
             // 
@@ -161,7 +164,8 @@
             // numericUpDownMinValue
             // 
             numericUpDownMinValue.Location = new Point(255, 195);
-            numericUpDownMinValue.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            numericUpDownMinValue.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDownMinValue.Minimum = new decimal(new int[] { 10, 0, 0, int.MinValue });
             numericUpDownMinValue.Name = "numericUpDownMinValue";
             numericUpDownMinValue.Size = new Size(69, 27);
             numericUpDownMinValue.TabIndex = 9;
@@ -170,6 +174,8 @@
             // numericUpDownMaxValue
             // 
             numericUpDownMaxValue.Location = new Point(330, 195);
+            numericUpDownMaxValue.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDownMaxValue.Minimum = new decimal(new int[] { 10, 0, 0, int.MinValue });
             numericUpDownMaxValue.Name = "numericUpDownMaxValue";
             numericUpDownMaxValue.Size = new Size(69, 27);
             numericUpDownMaxValue.TabIndex = 8;
@@ -249,32 +255,33 @@
             panel3.Controls.Add(textBoxOutPutTask);
             panel3.Location = new Point(490, 266);
             panel3.Name = "panel3";
-            panel3.Size = new Size(412, 172);
+            panel3.Size = new Size(412, 196);
             panel3.TabIndex = 2;
             // 
             // textBoxOutPutArray
             // 
-            textBoxOutPutArray.Location = new Point(22, 94);
+            textBoxOutPutArray.Location = new Point(22, 110);
             textBoxOutPutArray.Multiline = true;
             textBoxOutPutArray.Name = "textBoxOutPutArray";
-            textBoxOutPutArray.Size = new Size(275, 59);
+            textBoxOutPutArray.Size = new Size(275, 80);
             textBoxOutPutArray.TabIndex = 3;
             // 
             // buttonPrintArray
             // 
-            buttonPrintArray.Location = new Point(303, 93);
+            buttonPrintArray.Location = new Point(303, 110);
             buttonPrintArray.Name = "buttonPrintArray";
             buttonPrintArray.Size = new Size(94, 29);
             buttonPrintArray.TabIndex = 2;
-            buttonPrintArray.Text = "button9";
+            buttonPrintArray.Text = "результат";
             buttonPrintArray.UseVisualStyleBackColor = true;
+            buttonPrintArray.Click += buttonPrintArray_Click;
             // 
             // textBoxOutPutTask
             // 
             textBoxOutPutTask.Location = new Point(22, 13);
             textBoxOutPutTask.Multiline = true;
             textBoxOutPutTask.Name = "textBoxOutPutTask";
-            textBoxOutPutTask.Size = new Size(275, 59);
+            textBoxOutPutTask.Size = new Size(375, 91);
             textBoxOutPutTask.TabIndex = 1;
             // 
             // MainForm
