@@ -149,13 +149,13 @@
             panel2.Controls.Add(textBoxInitial);
             panel2.Location = new Point(490, 25);
             panel2.Name = "panel2";
-            panel2.Size = new Size(412, 235);
+            panel2.Size = new Size(412, 217);
             panel2.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 198);
+            label3.Location = new Point(22, 186);
             label3.Name = "label3";
             label3.Size = new Size(148, 20);
             label3.TabIndex = 10;
@@ -163,7 +163,7 @@
             // 
             // numericUpDownMinValue
             // 
-            numericUpDownMinValue.Location = new Point(255, 195);
+            numericUpDownMinValue.Location = new Point(255, 183);
             numericUpDownMinValue.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDownMinValue.Minimum = new decimal(new int[] { 10, 0, 0, int.MinValue });
             numericUpDownMinValue.Name = "numericUpDownMinValue";
@@ -173,7 +173,7 @@
             // 
             // numericUpDownMaxValue
             // 
-            numericUpDownMaxValue.Location = new Point(330, 195);
+            numericUpDownMaxValue.Location = new Point(330, 183);
             numericUpDownMaxValue.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDownMaxValue.Minimum = new decimal(new int[] { 10, 0, 0, int.MinValue });
             numericUpDownMaxValue.Name = "numericUpDownMaxValue";
@@ -183,7 +183,7 @@
             // 
             // numericUpDownNOf2D
             // 
-            numericUpDownNOf2D.Location = new Point(255, 162);
+            numericUpDownNOf2D.Location = new Point(255, 150);
             numericUpDownNOf2D.Name = "numericUpDownNOf2D";
             numericUpDownNOf2D.Size = new Size(69, 27);
             numericUpDownNOf2D.TabIndex = 7;
@@ -191,7 +191,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 165);
+            label2.Location = new Point(22, 153);
             label2.Name = "label2";
             label2.Size = new Size(149, 20);
             label2.TabIndex = 6;
@@ -200,7 +200,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(22, 131);
+            label1.Location = new Point(22, 119);
             label1.Name = "label1";
             label1.Size = new Size(161, 20);
             label1.TabIndex = 5;
@@ -208,14 +208,14 @@
             // 
             // numericUpDownMOf2D
             // 
-            numericUpDownMOf2D.Location = new Point(330, 162);
+            numericUpDownMOf2D.Location = new Point(330, 150);
             numericUpDownMOf2D.Name = "numericUpDownMOf2D";
             numericUpDownMOf2D.Size = new Size(69, 27);
             numericUpDownMOf2D.TabIndex = 4;
             // 
             // numericUpDownSize1D
             // 
-            numericUpDownSize1D.Location = new Point(330, 129);
+            numericUpDownSize1D.Location = new Point(330, 117);
             numericUpDownSize1D.Name = "numericUpDownSize1D";
             numericUpDownSize1D.Size = new Size(69, 27);
             numericUpDownSize1D.TabIndex = 3;
@@ -253,22 +253,22 @@
             panel3.Controls.Add(textBoxOutPutArray);
             panel3.Controls.Add(buttonPrintArray);
             panel3.Controls.Add(textBoxOutPutTask);
-            panel3.Location = new Point(490, 266);
+            panel3.Location = new Point(490, 248);
             panel3.Name = "panel3";
-            panel3.Size = new Size(412, 196);
+            panel3.Size = new Size(412, 214);
             panel3.TabIndex = 2;
             // 
             // textBoxOutPutArray
             // 
-            textBoxOutPutArray.Location = new Point(22, 110);
+            textBoxOutPutArray.Location = new Point(22, 100);
             textBoxOutPutArray.Multiline = true;
             textBoxOutPutArray.Name = "textBoxOutPutArray";
-            textBoxOutPutArray.Size = new Size(275, 80);
+            textBoxOutPutArray.Size = new Size(275, 108);
             textBoxOutPutArray.TabIndex = 3;
             // 
             // buttonPrintArray
             // 
-            buttonPrintArray.Location = new Point(303, 110);
+            buttonPrintArray.Location = new Point(303, 100);
             buttonPrintArray.Name = "buttonPrintArray";
             buttonPrintArray.Size = new Size(94, 29);
             buttonPrintArray.TabIndex = 2;
@@ -278,7 +278,7 @@
             // 
             // textBoxOutPutTask
             // 
-            textBoxOutPutTask.Location = new Point(22, 13);
+            textBoxOutPutTask.Location = new Point(22, 3);
             textBoxOutPutTask.Multiline = true;
             textBoxOutPutTask.Name = "textBoxOutPutTask";
             textBoxOutPutTask.Size = new Size(375, 91);

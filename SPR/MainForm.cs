@@ -64,23 +64,39 @@ public partial class MainForm : Form
 
     private void button2DMassive_Click(object sender, EventArgs e)
     {
-        textBoxInitial.Text = string.Empty;
-        n = (int)numericUpDownNOf2D.Value;
-        m = (int)numericUpDownMOf2D.Value;
-        arr2 = new int[MAX_SIZE, MAX_SIZE];
-        for (int i = 0; i < n; i++)
+        if (string.IsNullOrEmpty(textBoxInitial.Text))
         {
-            for (int j = 0; j < m; j++)
+            textBoxInitial.Text = string.Empty;
+            n = (int)numericUpDownNOf2D.Value;
+            m = (int)numericUpDownMOf2D.Value;
+            arr2 = new int[n * 2, m * 2];
+            for (int i = 0; i < n; i++)
             {
-                arr2[i, j] = rand.Next((int)numericUpDownMinValue.Value, (int)numericUpDownMaxValue.Value);
+                for (int j = 0; j < m; j++)
+                {
+                    arr2[i, j] = rand.Next((int)numericUpDownMinValue.Value, (int)numericUpDownMaxValue.Value);
+                }
             }
         }
-
+        else
+        {
+            textBoxInitial.Text = string.Empty;
+            n = (int)numericUpDownNOf2D.Value;
+            m = (int)numericUpDownMOf2D.Value;
+            arr2 = new int[n * 2, m * 2];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    //arr2[i, j] = int.Parse(textBoxInitial.Text.Split(" ")[i]).Split("\r\n");
+                }
+            }
+        }
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
             {
-                textBoxInitial.Text += Convert.ToString(arr2[i, j]) + "  ";
+                textBoxInitial.Text += Convert.ToString(arr2[i, j]) + "   ";
             }
             textBoxInitial.Text += "\r\n";
         }
@@ -111,7 +127,7 @@ public partial class MainForm : Form
     {
         textBoxOutPutTask.Text = string.Empty;
         textBoxOutPutArray.Text = string.Empty;
-        textBoxOutPutTask.Text += "Дан целочисленный одномерный массив размера N. Вставить -1 после каждого отрицательного элемента массива.";
+        textBoxOutPutTask.Text += "Дан целочисленный одномерный массив размера N. Вставить 1 после каждого положительного элемента массива";
         arr1 = first.Third(arr1, size);
         size = first.countForThird; // оставить
         for (int i = 0; i < size; i++)
@@ -124,7 +140,7 @@ public partial class MainForm : Form
     {
         textBoxOutPutTask.Text = string.Empty;
         textBoxOutPutArray.Text = string.Empty;
-        textBoxOutPutTask.Text += "Дан целочисленный одномерный массив размера N. Удалить из массива \r\nвсе отрицательный элементы";
+        textBoxOutPutTask.Text += "Дан целочисленный одномерный массив размера N. Удалить из массива все положительные элементы";
         arr1 = first.Four(arr1, size);
         size = first.countForFour; // оставить
         for (int i = 0; i < size; i++)
@@ -137,14 +153,14 @@ public partial class MainForm : Form
     {
         textBoxOutPutTask.Text = string.Empty;
         textBoxOutPutArray.Text = string.Empty;
-        textBoxOutPutTask.Text += "Дан целочисленный двумерный массив размера N*N. Добавить в массив строку 1 после каждой строки, в которой есть хотя бы один элемент, меньший по модулю среднего арифметического четных элементов массива.";
+        textBoxOutPutTask.Text += "Дан целочисленный двумерный массив размера N*N. Добавить в массив столбец -1 после каждого столбца, в котором есть хотя бы один элемент, больший по модулю среднего арифметического отрицательных элементов массива.";
         arr2 = first.Five(arr2, n, m);
-        n = first.nForFive;
+        m = first.mForFive;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
             {
-                textBoxOutPutArray.Text += Convert.ToString(arr2[i, j]) + "  ";
+                textBoxOutPutArray.Text += Convert.ToString(arr2[i, j]) + "   ";
             }
             textBoxOutPutArray.Text += "\r\n";
         }
@@ -162,7 +178,7 @@ public partial class MainForm : Form
             {
                 textBoxOutPutArray.Text += Convert.ToString(arr2[i, j]) + "  ";
             }
-            textBoxOutPutArray.Text += "\r\n";
+            textBoxOutPutArray.Text += "\r\n  ";
         }
     }
 

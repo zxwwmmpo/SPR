@@ -11,7 +11,7 @@ public class FirsrtTask
 {
     public int countForThird = 0;
     public int countForFour = 0;
-    public int nForFive = 0;
+    public int mForFive = 0;
 
     public string First(int[] arr, int size)
     {
@@ -93,14 +93,14 @@ public class FirsrtTask
         for (int i = 0; i < arr.Length; i++)
         {
             count++;
-            if (arr[i] < 0)
+            if (arr[i] > 0)
             {
                 l++;
                 for (int k = size + l - 1; k > count; k--) // изменить
                 {
                     arr[k] = arr[k - 1];
                 }
-                arr[count] = -1;
+                arr[count] = 1;
                 countForThird++; //оставить 
                 count++;
                 i++;
@@ -112,19 +112,21 @@ public class FirsrtTask
     public int[] Four(int[] arr, int size)
     {
         countForFour = size;
-        for (int i = 0; i < arr.Length; i++)
+        int count = 0;
+        for (int i = 0; i < size; i++)
         {
-            if (arr[i] < 0)
+            if (arr[i] > 0)
             {
+                count++;
                 for (int k = i; k < size - 1; k++)
                 {
                     arr[k] = arr[k + 1];
                 }
                 size--;
-                countForFour--;
                 i--;
             }
         }
+        countForFour -= count;
         return arr;
     }
 
@@ -133,53 +135,52 @@ public class FirsrtTask
         int sr = 0;
         int count = 0;
         int sum = 0;
-        nForFive = n;
+        mForFive = m;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
             {
-                if (arr[i, j] % 2 == 0 && arr[i, j] != 0)
+                if (arr[i, j] < 0)
                 {
                     sum += Math.Abs(arr[i, j]);
                     count++;
                 }
             }
         }
-        if (count != 0)
+
+        if (count == 0)
         {
-            sr = (sum / count);
+
+            return arr;
         }
         else
         {
-            return arr;
-        }
-        count = 0;
-        for (int i = 0; i < n; i++)
-        {
+            sr = (sum / count);
+
+
             for (int j = 0; j < m; j++)
             {
-                if (Math.Abs(arr[i, j]) < sr)
+                for (int i = 0; i < n; i++)
                 {
-                    count++;
-                }
-            }
-
-            if (count > 0)
-            {
-                for (int l = n; l > i + 1; l--)
-                {
-                    for (int h = 0; h < m; h++)
+                    if (Math.Abs(arr[i, j]) > sr)
                     {
-                        arr[l, h] = arr[l - 1, h];
+                        for (int l = m; l > j + 1; l--)
+                        {
+                            for (int h = 0; h < n; h++)
+                            {
+                                arr[h, l] = arr[h, l - 1];
+                            }
+                        }
+                        for (int h = 0; h < n; h++)
+                        {
+                            arr[h, j + 1] = -1;
+                        }
+                        mForFive++;
+                        m++;
+                        j++;
+                        break;
                     }
                 }
-                for (int h = 0; h < m; h++)
-                {
-                    arr[i + 1, h] = 1;
-                }
-                n++;
-                nForFive++;
-                i++;
             }
         }
         return arr;
